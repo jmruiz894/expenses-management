@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/jmruiz894/repositorios/src"
+    "url": "https://jmruiz894@bitbucket.org/jmruiz894/repositorios.git"
   },
   "keywords": [
     "money",
@@ -24,5 +24,11 @@
   ],
   "author": "jmruiz894",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/jmruiz894/repositorios/src/master/README.md"
+  "homepage": "https://bitbucket.org/jmruiz894/repositorios/src/master/README.md",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "node": "^15.4.0",
+    "sequelize": "^6.4.0"
+  }
 }
