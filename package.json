@@ -1,0 +1,28 @@
+{
+  "name": "expenses-management",
+  "version": "1.0.0",
+  "description": "Personal expense manager",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/jmruiz894/repositorios/src"
+  },
+  "keywords": [
+    "money",
+    "wallet",
+    "express",
+    "backend",
+    "api",
+    "rest",
+    "sequelize",
+    "server",
+    "expense"
+  ],
+  "author": "jmruiz894",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jmruiz894/repositorios/src/master/README.md"
+}
