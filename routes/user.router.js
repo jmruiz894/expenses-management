@@ -1,11 +1,25 @@
 import { Router } from "express";
+import userController from "../controllers/user.controller";
 
 const router = Router({
     mergeParams: true,
 });
 
-router.all("/", (req, res) => {
-    res.send({ message: "welcome to express serve v1 - user"});
-});
+router.get(
+    "/",
+    userController.getUser
+);
+router.post(
+    "/",
+    userController.createUser
+);
+router.put(
+    "/:userId",
+    userController.updateUser
+);
+router.delete(
+    "/:userId",
+    userController.daleteUser
+);
 
 export default router;

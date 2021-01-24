@@ -1,11 +1,25 @@
 import { Router } from "express";
+import transactionTypeController from "../controllers/transaction-type.controller";
 
 const router = Router({
     mergeParams: true,
 });
 
-router.all("/", (req, res) => {
-    res.send({ message: "welcome to express serve v1 - transaction-type"});
-});
+router.get(
+    "/",
+    transactionTypeController.getTransactionType
+);
+router.post(
+    "/",
+    transactionTypeController.createTransactionType
+);
+router.put(
+    "/:transactionTypeId",
+    transactionTypeController.updateTransactionType
+);
+router.delete(
+    "/:transactionTypeId",
+    transactionTypeController.deleteTransactionType
+);
 
 export default router;
