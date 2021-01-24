@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 import TransactionType from "./transaction-type.entity";
 import Transaction from "./transaction.entity";
 import User from "./user.entity";
-import setup from "../commons/sequelize.setup";
+import setup from "../configs/sequelize.setup";
 // Defining Table's relationship
 
 User.hasMany(Transaction);
