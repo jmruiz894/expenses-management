@@ -1,9 +1,8 @@
 import { Router } from "express";
+import routerConfig from "../commons/router.config";
 import userController from "../controllers/user.controller";
 
-const router = Router({
-    mergeParams: true,
-});
+const router = Router(routerConfig);
 
 router.get(
     "/",

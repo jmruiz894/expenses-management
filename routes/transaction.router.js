@@ -1,9 +1,8 @@
 import { Router } from "express";
 import transactionController from "../controllers/transaction.controller";
+import routerConfig from "../commons/router.config";
 
-const router = Router({
-    mergeParams: true,
-});
+const router = Router(routerConfig);
 
 router.get(
     "/",
