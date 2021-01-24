@@ -32,6 +32,7 @@
     "sequelize": "^6.4.0"
   },
   "devDependencies": {
+    "body-parser": "^1.19.0",
     "eslint": "^7.18.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1"
