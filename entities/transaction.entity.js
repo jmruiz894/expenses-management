@@ -12,12 +12,6 @@ Transaction.init(
             type: DataTypes.DOUBLE,
             allowNull: false,
         },
-        type: {
-            // TODO: Define foreign key to Transaction Type Entity
-        },
-        user: {
-            // TODO: Define foreign key to User Entity
-        },
         concept: {
             type: DataTypes.STRING(1000),
             allowNull: false,
