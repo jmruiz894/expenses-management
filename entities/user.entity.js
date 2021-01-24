@@ -18,6 +18,7 @@ User.init(
       },
       // TODO: Include userName property when user authentication has been done
       email: {
+        unique: true,
         type: DataTypes.STRING,
         allowNull: false,
       },
