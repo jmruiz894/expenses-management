@@ -1,6 +1,6 @@
 import { Router } from "express";
 import transactionTypeController from "../controllers/transaction-type.controller";
-import routerConfig from "../commons/router.config";
+import routerConfig from "../configs/router.config";
 
 const router = Router(routerConfig);
 

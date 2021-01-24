@@ -1,5 +1,5 @@
 export default {
-    USER: "User",
-    TRANSACTION: "Transaction",
-    TRANSACTION_TYPE: "TransactionType",
+  USER: "User",
+  TRANSACTION: "Transaction",
+  TRANSACTION_TYPE: "TransactionType",
 };

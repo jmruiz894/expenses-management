@@ -1,5 +1,5 @@
 import { Router } from "express";
-import routerConfig from "../commons/router.config";
+import routerConfig from "../configs/router.config";
 import apiV1 from "./api-v1.router";
 
 const router = Router(routerConfig);
