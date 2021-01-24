@@ -1,5 +1,5 @@
 import { Router } from "express";
-import userRouter from ".user.router";
+import userRouter from "./user.router";
 import transactionRouter from "./transaction.router";
 import transactionTypeRouter from "./transaction-type.router";
 import routerConfig from "../commons/router.config";

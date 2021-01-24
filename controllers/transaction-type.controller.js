@@ -1,4 +1,4 @@
-import statusCode from "../references/http-status-codes.reference";
+import statusCode from "../references/http-status-codes.references";
 
 class TransactionTypeController {
   getTransactionType(req, res) {
