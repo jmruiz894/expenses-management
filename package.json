@@ -32,7 +32,8 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "node": "^15.4.0",
-    "sequelize": "^6.4.0"
+    "sequelize": "^6.4.0",
+    "sqlite3": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "^7.18.0",
