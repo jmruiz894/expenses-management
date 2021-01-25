@@ -1,4 +1,5 @@
 import { app, beforeLoad } from "./server";
+import logger from "./core/logger";
 
 const port = process.env.APP_PORT || 3000;
 
@@ -10,6 +11,5 @@ const startLocal = async (appInstance, appPort, beforeLoadFuncs = []) => {
 };
 
 startLocal(app, port, beforeLoad).then(() => {
-  // eslint-disable-next-line no-console
-  console.log(`App listening on port ${port}!`);
+  logger.log(`App listening on port ${port}!`);
 });
