@@ -10,5 +10,9 @@ Transaction.belongsTo(User);
 Transaction.belongsTo(TransactionType);
 TransactionType.hasMany(Transaction);
 
-const init = () => initializeSequelize(setup);
-export { TransactionType, Transaction, User, init };
+const database = {};
+initializeSequelize(setup).then((instance) => {
+  database.instance = instance;
+});
+
+export { TransactionType, Transaction, User, database };
