@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 
 export default {
-  Active: {
+  active: {
     type: DataTypes.BOOLEAN,
     defaultValue: true,
   },
