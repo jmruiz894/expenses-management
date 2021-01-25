@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "lint:fix": "eslint  --fix --ignore-path .gitignore .  ",
-    "start": "node -r esm index.js"
+    "start": "node -r esm index.js",
+    "sync:db": "node -r esm sync.js"
   },
   "repository": {
     "type": "git",
