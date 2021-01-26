@@ -1,32 +1,44 @@
+import logger from "../core/logger";
+import { repositories } from "../database";
 import statusCode from "../references/http-status-codes.references";
+import tables from "../references/db-table-names.reference";
 
 class TransactionTypeController {
-  getTransactionType(req, res) {
-    return res.status(statusCode.methodNotAllowed).send({
-      message: "Method not implemented yet",
-      query: req.query,
-    });
+  #repository;
+
+  getRepository() {
+    if (!this.#repository)
+      this.#repository = repositories.getInstance(tables.USER);
+    return this.#repository;
   }
 
-  createTransactionType(req, res) {
-    return res.status(statusCode.methodNotAllowed).send({
-      message: "Method not implemented yet",
-      query: req.query,
-    });
+  async getTransactionType(req, res) {
+    const tType = await this.getRepository().find(req.query);
+    logger.info(`[GET] TType data: ${JSON.stringify(tType)}`);
+    return res.status(statusCode.oK).send(tType || {});
   }
 
-  updateTransactionType(req, res) {
-    return res.status(statusCode.methodNotAllowed).send({
-      message: "Method not implemented yet",
-      query: req.query,
-    });
+  async createTransactionType(req, res) {
+    const tType = await this.getRepository().create(req.body);
+    logger.info(`[POST] TType data: ${JSON.stringify(tType)}`);
+    return res.status(statusCode.oK).send(tType || {});
   }
 
-  deleteTransactionType(req, res) {
-    return res.status(statusCode.methodNotAllowed).send({
-      message: "Method not implemented yet",
-      query: req.query,
-    });
+  async updateTransactionType(req, res) {
+    const updatedRows = await this.getRepository().updateById(
+      req.params.transactionType,
+      req.body
+    );
+    logger.info(`[PUT] TType data: ${updatedRows}`);
+    return res.status(statusCode.oK).send({ updated: updatedRows });
+  }
+
+  async deleteTransactionType(req, res) {
+    const updatedRows = await this.getRepository().deleteById(
+      req.params.transactionType
+    );
+    logger.info(`[DEL] TType data: ${updatedRows}`);
+    return res.status(statusCode.oK).send({ deleted: updatedRows });
   }
 }
 
