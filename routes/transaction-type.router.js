@@ -4,15 +4,28 @@ import routerConfig from "../configs/router.config";
 
 const router = Router(routerConfig);
 
-router.get("/", transactionTypeController.getTransactionType);
-router.post("/", transactionTypeController.createTransactionType);
-router.put(
+router.get(
+  "/",
+  transactionTypeController.getTransactionType.bind(
+    transactionTypeController
+  )
+);
+router.post(
+  "/",
+  transactionTypeController.createTransactionType.bind(
+    transactionTypeController
+  )
+);router.put(
   "/:transactionTypeId",
-  transactionTypeController.updateTransactionType
+  transactionTypeController.updateTransactionType.bind(
+    transactionTypeController
+  )
 );
 router.delete(
   "/:transactionTypeId",
-  transactionTypeController.deleteTransactionType
+  transactionTypeController.deleteTransactionType.bind(
+    transactionTypeController
+  )
 );
 
 export default router;
