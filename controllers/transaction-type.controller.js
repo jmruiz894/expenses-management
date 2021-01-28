@@ -1,7 +1,7 @@
 import logger from "../core/logger";
 import { repositories } from "../database";
 import statusCode from "../references/http-status-codes.references";
-import tables from "../references/db-table-names.reference";
+import tables from "../references/db-table-name.reference";
 
 class TransactionTypeController {
   #repository;
