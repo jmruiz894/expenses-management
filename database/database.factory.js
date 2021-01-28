@@ -1,4 +1,4 @@
-import tables from "../references/db-table-names.reference";
+import tables from "../references/db-table-name.reference";
 import TransactionTypeFactory from "./transaction-type.factory";
 import TransactionFactory from "./transaction.factory";
 import UserFactory from "./user.factory";
